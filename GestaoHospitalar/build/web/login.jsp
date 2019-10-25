@@ -5,12 +5,11 @@
 --%>
 
 <%@include file="includes/cabecalho.html" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <div class="row">
     <div class="col align-self-center p-3">
-        <h3 class="text-center" style="border: black 1px">Gest√£o Hospitalar</h3>
+        <h3 class="text-center" style="border: black 1px">Gest„o Hospitalar</h3>
         <div class="row">
             <div class="col-6 offset-3 bg-info p-1">
                 <div class="card d-flex">

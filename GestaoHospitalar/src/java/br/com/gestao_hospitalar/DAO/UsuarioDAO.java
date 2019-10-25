@@ -39,7 +39,7 @@ public class UsuarioDAO {
             pst.setString(3, usuario.getUserName());
             pst.setString(4, usuario.getEmail());
             pst.setString(5, usuario.getSenha());
-            pst.setDate(2,new Date(usuario.getDataRegistro().getTime()));
+            pst.setDate(6,new Date(usuario.getDataRegistro().getTime()));
             pst.execute();
             
             FabricaConexao.fecharConexao();

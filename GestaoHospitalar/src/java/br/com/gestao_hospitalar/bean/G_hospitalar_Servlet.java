@@ -9,6 +9,9 @@ import br.com.gestao_hopitalar.entidade.Medicamento;
 import br.com.gestao_hospitalar.DAO.MedicamentoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,40 +37,54 @@ public class G_hospitalar_Servlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ParseException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
              
-     Integer  forma_farmaceutica_id;
+     Integer forma_farmaceutica_id;
+     Integer status_id;
      String nome;
      String descricao;
      Integer quantidade;
      Float valor;
      Integer estoque_min;
-     String data_criacao;
-     String data_modificacao;
+     Date data_criacao;
+     Date data_modificacao;
      
+     Date dt = new Date();
+     
+     //DateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
+     //String dateFormated = formatDate.format(dt);
+     //String dt2 = formatDate.format(dt);
+            
+            forma_farmaceutica_id = 1;
+            status_id = 1;
+            
             nome = request.getParameter("nome");
             descricao = request.getParameter("descricao");
             quantidade = Integer.valueOf(request.getParameter("quantidade"));       
             valor = Float.valueOf(request.getParameter("valor"));
             estoque_min = Integer.valueOf(request.getParameter("estoque"));
-            data_criacao = request.getParameter("data_criacao");
-            data_modificacao = request.getParameter("data_mod");
+            data_criacao = dt;
+            //data_modificacao = request.getParameter("data_mod");
             Medicamento med = new Medicamento();
-            MedicamentoDAO meds = new MedicamentoDAO();
+            MedicamentoDAO med_dao = new MedicamentoDAO();
             
+            med.setForma_farmaceutica_id(forma_farmaceutica_id);
+            med.setStatus_id(status_id);
             med.setNome(nome);
             med.setDescricao(descricao);
             med.setQuantidade(quantidade);
             med.setValor(valor);
             med.setEstoque_min(estoque_min);
-            med.setData_criacao(data_criacao); 
+            med.setData_criacao(dt); 
+            
+            //out.println(med.getDescricao());
      
                  
             try {
-                meds.inserir(med);
+                med_dao.inserir(med);
                 
                 //lcd.listar();
                 
@@ -76,7 +93,7 @@ public class G_hospitalar_Servlet extends HttpServlet {
             } catch (Exception ex) {
                 Logger.getLogger(G_hospitalar_Servlet.class.getName()).log(Level.SEVERE, null, ex);
             }
-               
+              
 
                 
             
@@ -97,7 +114,11 @@ public class G_hospitalar_Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ParseException ex) {
+            Logger.getLogger(G_hospitalar_Servlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -111,7 +132,11 @@ public class G_hospitalar_Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ParseException ex) {
+            Logger.getLogger(G_hospitalar_Servlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
