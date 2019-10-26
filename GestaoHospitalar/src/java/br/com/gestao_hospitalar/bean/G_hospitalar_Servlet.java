@@ -57,8 +57,6 @@ public class G_hospitalar_Servlet extends HttpServlet {
      //DateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
      //String dateFormated = formatDate.format(dt);
      //String dt2 = formatDate.format(dt);
-            
-            forma_farmaceutica_id = 1;
             status_id = 1;
             
             nome = request.getParameter("nome");
@@ -66,6 +64,7 @@ public class G_hospitalar_Servlet extends HttpServlet {
             quantidade = Integer.valueOf(request.getParameter("quantidade"));       
             valor = Float.valueOf(request.getParameter("valor"));
             estoque_min = Integer.valueOf(request.getParameter("estoque"));
+            forma_farmaceutica_id = Integer.valueOf(request.getParameter("forma_farmaceutica"));
             data_criacao = dt;
             //data_modificacao = request.getParameter("data_mod");
             Medicamento med = new Medicamento();
@@ -79,7 +78,6 @@ public class G_hospitalar_Servlet extends HttpServlet {
             med.setValor(valor);
             med.setEstoque_min(estoque_min);
             med.setData_criacao(dt); 
-            
             //out.println(med.getDescricao());
      
                  

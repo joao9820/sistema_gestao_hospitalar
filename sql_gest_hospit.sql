@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Out-2019 às 02:08
+-- Generation Time: 25-Out-2019 às 23:44
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -38,7 +38,9 @@ CREATE TABLE `formas_farmaceuticas` (
 --
 
 INSERT INTO `formas_farmaceuticas` (`id`, `nome`) VALUES
-(1, 'Conta Gotas');
+(1, 'Conta Gotas'),
+(2, 'Comprimido'),
+(3, 'Pastilha');
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,8 @@ CREATE TABLE `medicamentos` (
 
 INSERT INTO `medicamentos` (`id`, `forma_farmaceutica_id`, `status_id`, `nome`, `descricao`, `quantidade`, `valor`, `estoque_min`, `data_criacao`, `data_modificacao`) VALUES
 (1, 1, 1, 'Dramin', 'Remédio para náuseas', 6, '1.59', 6, '2019-10-25', NULL),
-(2, 1, 1, 'Dipirona ', 'Remédo para dor de cabeça ', 10, '2.99', 9, '2019-10-25', NULL);
+(2, 1, 1, 'Dipirona ', 'Remédo para dor de cabeça ', 10, '2.99', 9, '2019-10-25', NULL),
+(3, 3, 1, 'Vick', 'Pastilhas para dor de garganta', 40, '2.00', 35, '2019-10-25', NULL);
 
 -- --------------------------------------------------------
 
@@ -215,13 +218,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `formas_farmaceuticas`
 --
 ALTER TABLE `formas_farmaceuticas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `medicamentos`
 --
 ALTER TABLE `medicamentos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `solicitacao`
