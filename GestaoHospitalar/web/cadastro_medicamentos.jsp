@@ -3,6 +3,11 @@
     Created on : 23/10/2019, 18:50:54
     Author     : matheus.louzeiro
 --%>
+<%@page import="br.com.gestao_hospitalar.DAO.FormaFarmaceuticaDAO"%>
+<%@page import="br.com.gestao_hospitalar.entidade.FormaFarmaceutica"%>
+<%@page import="java.util.ArrayList"%>
+
+
 <!DOCTYPE html>
 <%@include file="includes/cabecalho.html" %>
    
@@ -22,6 +27,40 @@
         <div class="form-group" >
           Valor: <input type='text' class='form-control' name='valor' />                     
         </div>
+       <div class="col-md-4 pl-0">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Forma farmaceutica</label>   
+        <select name="forma_farmaceutica" class="form-control" id="exampleFormControlSelect2">
+       <% 
+       
+            String forma_id = "";
+            String forma_nome = "";
+            
+            FormaFarmaceuticaDAO listarFormas = new FormaFarmaceuticaDAO();
+            FormaFarmaceutica f = new FormaFarmaceutica();
+            
+            ArrayList<FormaFarmaceutica> formaList = listarFormas.pesquisarTudo();
+            
+            for(int  i = 0; i < formaList.size(); i++){
+                
+            f = formaList.get(i);
+            
+            forma_id = String.valueOf(f.getId());
+            forma_nome = String.valueOf(f.getNome());
+           
+       
+       %>
+      
+           <option value="<%=forma_id%>"><%=forma_nome%></option>
+       
+       <% 
+        }
+       %>
+       
+        </select>
+        </div>
+       </div>
+
         <div class="form-group" >
           Estoque Mínimo <input type='number' class='form-control' name='estoque' />                     
         </div>

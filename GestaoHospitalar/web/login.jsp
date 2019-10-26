@@ -21,7 +21,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Senha</label>
-                                    <input type="text" class="form-control" placeholder="Senha" name="senha">
+                                    <input type="password" class="form-control" placeholder="Senha" name="senha">
                             </div>
                            <div class="d-flex">
                                <input type="submit" value="Entrar" class="btn btn-success" style="width: 80px">

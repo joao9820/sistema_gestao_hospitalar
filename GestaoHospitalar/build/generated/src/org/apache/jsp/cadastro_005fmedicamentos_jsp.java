@@ -3,6 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import br.com.gestao_hospitalar.DAO.FormaFarmaceuticaDAO;
+import br.com.gestao_hospitalar.entidade.FormaFarmaceutica;
+import java.util.ArrayList;
 
 public final class cadastro_005fmedicamentos_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -48,26 +51,30 @@ public final class cadastro_005fmedicamentos_jsp extends org.apache.jasper.runti
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<!--\n");
-      out.write("To change this license header, choose License Headers in Project Properties.\n");
-      out.write("To change this template file, choose Tools | Templates\n");
-      out.write("and open the template in the editor.\n");
-      out.write("-->\n");
-      out.write("<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-br\" xml:lang=\"pt-br\">\n");
-      out.write("    <head>\n");
-      out.write("        <title>GestÃ£o Hospitalar</title>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html;\" charset=\"utf-8\"/>\n");
-      out.write("\n");
-      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-      out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">       \n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        \n");
-      out.write("        <div class=\"container p-3\">\n");
-      out.write("            <main role=\"main\"> \n");
-      out.write("                \n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<!--\r\n");
+      out.write("To change this license header, choose License Headers in Project Properties.\r\n");
+      out.write("To change this template file, choose Tools | Templates\r\n");
+      out.write("and open the template in the editor.\r\n");
+      out.write("-->\r\n");
+      out.write("<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-br\" xml:lang=\"pt-br\">\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <title>GestÃ£o Hospitalar</title>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html;\" charset=\"utf-8\"/>\r\n");
+      out.write("\r\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">       \r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body>\r\n");
+      out.write("        \r\n");
+      out.write("        <div class=\"container p-3\">\r\n");
+      out.write("            <main role=\"main\"> \r\n");
+      out.write("                \r\n");
       out.write("                 ");
       out.write("\r\n");
       out.write("   \r\n");
@@ -86,6 +93,44 @@ public final class cadastro_005fmedicamentos_jsp extends org.apache.jasper.runti
       out.write("        </div>\r\n");
       out.write("        <div class=\"form-group\" >\r\n");
       out.write("          Valor: <input type='text' class='form-control' name='valor' />                     \r\n");
+      out.write("        </div>\r\n");
+      out.write("       ");
+ 
+       
+            String forma_id = "";
+            String forma_nome = "";
+            
+            FormaFarmaceuticaDAO listarFormas = new FormaFarmaceuticaDAO();
+            FormaFarmaceutica f = new FormaFarmaceutica();
+            
+            ArrayList<FormaFarmaceutica> formaList = listarFormas.pesquisarTudo();
+            
+            for(int  i = 0; i < formaList.size(); i++){
+                
+            f = formaList.get(i);
+            
+            forma_id = String.valueOf(f.getId());
+            forma_nome = String.valueOf(f.getNome());
+           
+       
+       
+      out.write("\r\n");
+      out.write("       <select name=\"forma_farmaceutica\">\r\n");
+      out.write("           <option value=\"");
+      out.print(forma_id);
+      out.write('"');
+      out.write('>');
+      out.print(forma_nome);
+      out.write("</option>\r\n");
+      out.write("       </select>\r\n");
+      out.write("       \r\n");
+      out.write("       ");
+ 
+        }
+       
+      out.write("\r\n");
+      out.write("        <div class=\"form-group\" >\r\n");
+      out.write("          Forma Farmaceutica <input type='number' class='form-control' name='estoque' />                     \r\n");
       out.write("        </div>\r\n");
       out.write("        <div class=\"form-group\" >\r\n");
       out.write("          Estoque Mínimo <input type='number' class='form-control' name='estoque' />                     \r\n");
