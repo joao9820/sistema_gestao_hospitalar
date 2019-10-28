@@ -14,7 +14,7 @@
 <div class="col-md-6 offset-md-3">  
     <form action='Ghospitalar' method="POST">
        <h2 class="text-center">Cadastro de Medicamentos</h2>
-
+        <p>Olá ${sessionScope.usuarioLogado.nome}</p>
         <div class="form-group" >
           Nome: <input type='text' class='form-control' name='nome' />                     
         </div>
@@ -25,7 +25,7 @@
           Quantidade: <input type='number' class='form-control' name='quantidade' />                     
         </div>
         <div class="form-group" >
-          Valor: <input type='text' class='form-control' name='valor' />                     
+          Valor: <input type="text" class='form-control' name='valor' />                     
         </div>
        <div class="col-md-4 pl-0">
         <div class="form-group">
