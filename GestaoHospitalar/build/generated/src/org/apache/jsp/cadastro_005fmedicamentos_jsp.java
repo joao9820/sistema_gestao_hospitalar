@@ -55,6 +55,7 @@ public final class cadastro_005fmedicamentos_jsp extends org.apache.jasper.runti
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<!--\r\n");
@@ -81,7 +82,9 @@ public final class cadastro_005fmedicamentos_jsp extends org.apache.jasper.runti
       out.write("<div class=\"col-md-6 offset-md-3\">  \r\n");
       out.write("    <form action='Ghospitalar' method=\"POST\">\r\n");
       out.write("       <h2 class=\"text-center\">Cadastro de Medicamentos</h2>\r\n");
-      out.write("\r\n");
+      out.write("        <p>Olá ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.usuarioLogado.nome}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</p>\r\n");
       out.write("        <div class=\"form-group\" >\r\n");
       out.write("          Nome: <input type='text' class='form-control' name='nome' />                     \r\n");
       out.write("        </div>\r\n");
@@ -92,8 +95,12 @@ public final class cadastro_005fmedicamentos_jsp extends org.apache.jasper.runti
       out.write("          Quantidade: <input type='number' class='form-control' name='quantidade' />                     \r\n");
       out.write("        </div>\r\n");
       out.write("        <div class=\"form-group\" >\r\n");
-      out.write("          Valor: <input type='text' class='form-control' name='valor' />                     \r\n");
+      out.write("          Valor: <input type=\"text\" class='form-control' name='valor' />                     \r\n");
       out.write("        </div>\r\n");
+      out.write("       <div class=\"col-md-4 pl-0\">\r\n");
+      out.write("        <div class=\"form-group\">\r\n");
+      out.write("          <label for=\"exampleFormControlSelect1\">Forma farmaceutica</label>   \r\n");
+      out.write("        <select name=\"forma_farmaceutica\" class=\"form-control\" id=\"exampleFormControlSelect2\">\r\n");
       out.write("       ");
  
        
@@ -115,23 +122,24 @@ public final class cadastro_005fmedicamentos_jsp extends org.apache.jasper.runti
        
        
       out.write("\r\n");
-      out.write("       <select name=\"forma_farmaceutica\">\r\n");
+      out.write("      \r\n");
       out.write("           <option value=\"");
       out.print(forma_id);
       out.write('"');
       out.write('>');
       out.print(forma_nome);
       out.write("</option>\r\n");
-      out.write("       </select>\r\n");
       out.write("       \r\n");
       out.write("       ");
  
         }
        
       out.write("\r\n");
-      out.write("        <div class=\"form-group\" >\r\n");
-      out.write("          Forma Farmaceutica <input type='number' class='form-control' name='estoque' />                     \r\n");
+      out.write("       \r\n");
+      out.write("        </select>\r\n");
       out.write("        </div>\r\n");
+      out.write("       </div>\r\n");
+      out.write("\r\n");
       out.write("        <div class=\"form-group\" >\r\n");
       out.write("          Estoque Mínimo <input type='number' class='form-control' name='estoque' />                     \r\n");
       out.write("        </div>\r\n");

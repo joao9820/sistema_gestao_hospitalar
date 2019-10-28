@@ -4,6 +4,7 @@
     Author     : usuaio
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="includes/cabecalho.html" %>
 <!DOCTYPE html>
 
@@ -11,23 +12,34 @@
     <div class="col align-self-center p-3">
         <h3 class="text-center" style="border: black 1px">Gestão Hospitalar</h3>
         <div class="row">
+            <div class="col-6 offset-3">
+            <c:if test="${mensagens.existeErros}">
+                <div class="alert alert-danger">
+                    <ul>
+                        <c:forEach var="erro" items="${mensagens.erros}">
+                            <li> ${erro} </li>
+                            </c:forEach>
+                    </ul>
+                </div>
+            </c:if>
+            </div>
             <div class="col-6 offset-3 bg-info p-1">
                 <div class="card d-flex">
                     <div class="card-body">
-                       <form action="/validaForm" method="POST">			
+                        <form action="index" method="POST">			
                             <div class="form-group">
                                 <label>Login</label>
-                                <input type="text" class="form-control" placeholder="Login" name="login">
+                                <input type="text" class="form-control" placeholder="Login" name="login" v>
                             </div>
                             <div class="form-group">
                                 <label>Senha</label>
-                                    <input type="password" class="form-control" placeholder="Senha" name="senha">
+                                <input type="password" class="form-control" placeholder="Senha" name="senha">
                             </div>
-                           <div class="d-flex">
-                               <input type="submit" value="Entrar" class="btn btn-success" style="width: 80px">
-                               <input type="submit" value="Cadastrar" class="btn btn-link" style="width: 80px">
-                           </div>
-                            </form>
+                            <div class="d-flex">
+                                <input type="submit" name="entrar" value="Entrar" class="btn btn-success" style="width: 80px">
+                                <!-- <input type="submit" value="Cadastrar" class="btn btn-link" style="width: 80px"> -->
+                            </div>
+                        </form>
                     </div>    
                 </div>
             </div>

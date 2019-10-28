@@ -54,7 +54,7 @@ public class UsuarioDAO {
         ResultSet rs = null;
         
         try {
-            pst = conexao.prepareCall("id, tp_usuario_id, nome ,username, email, senha, data_criacao "
+            pst = conexao.prepareCall("SELECT id, tp_usuario_id, nome ,username, email, senha, data_criacao "
                     + "from usuarios where username = ?");
             pst.setString(1, login);
             
@@ -62,7 +62,8 @@ public class UsuarioDAO {
             if (rs.next()) {
                 return new Usuario(rs.getInt("id"), 
                 rs.getString("nome"), 
-                rs.getString("username"), 
+                rs.getString("username"),
+                rs.getString("email"),
                 rs.getString("senha")); 
                 //rs.getBoolean("usu_adm"));
             }
