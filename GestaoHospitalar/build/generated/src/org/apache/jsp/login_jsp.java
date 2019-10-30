@@ -60,63 +60,101 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
-      out.write("<!--\r\n");
-      out.write("To change this license header, choose License Headers in Project Properties.\r\n");
-      out.write("To change this template file, choose Tools | Templates\r\n");
-      out.write("and open the template in the editor.\r\n");
-      out.write("-->\r\n");
-      out.write("<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-br\" xml:lang=\"pt-br\">\r\n");
-      out.write("    <head>\r\n");
-      out.write("        <title>GestÃ£o Hospitalar</title>\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html;\" charset=\"utf-8\"/>\r\n");
-      out.write("\r\n");
-      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">       \r\n");
-      out.write("    </head>\r\n");
-      out.write("    <body>\r\n");
-      out.write("        \r\n");
-      out.write("        <div class=\"container p-3\">\r\n");
-      out.write("            <main role=\"main\"> \r\n");
-      out.write("                \r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<!--\n");
+      out.write("To change this license header, choose License Headers in Project Properties.\n");
+      out.write("To change this template file, choose Tools | Templates\n");
+      out.write("and open the template in the editor.\n");
+      out.write("-->\n");
+      out.write("<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-br\" xml:lang=\"pt-br\">\n");
+      out.write("    <head>\n");
+      out.write("        <title>GestÃ£o Hospitalar</title>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html;\" charset=\"utf-8\"/>\n");
+      out.write("\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">       \n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("        \n");
+      out.write("        <div class=\"container p-3\">\n");
+      out.write("            <main role=\"main\"> \n");
+      out.write("                \n");
       out.write("                 ");
-      out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
-      out.write("\r\n");
-      out.write("<div class=\"row\">\r\n");
-      out.write("    <div class=\"col align-self-center p-3\">\r\n");
-      out.write("        <h3 class=\"text-center\" style=\"border: black 1px\">Gestão Hospitalar</h3>\r\n");
-      out.write("        <div class=\"row\">\r\n");
-      out.write("            <div class=\"col-6 offset-3 bg-info p-1\">\r\n");
-      out.write("                ");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("\n");
+      out.write("<div class=\"row\">\n");
+      out.write("    <div class=\"col align-self-center p-3\">\n");
+      out.write("        <h3 class=\"text-center\" style=\"border: black 1px\">Gestão Hospitalar</h3>\n");
+      out.write("        <div class=\"row\">\n");
+      out.write("            <div class=\"col-6 offset-3\">\n");
+      out.write("            ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
-      out.write("\r\n");
-      out.write("                <div class=\"card d-flex\">\r\n");
-      out.write("                    <div class=\"card-body\">\r\n");
-      out.write("                        <form action=\"index\" method=\"POST\">\t\t\t\r\n");
-      out.write("                            <div class=\"form-group\">\r\n");
-      out.write("                                <label>Login</label>\r\n");
-      out.write("                                <input type=\"text\" class=\"form-control\" placeholder=\"Login\" name=\"login\" v>\r\n");
-      out.write("                            </div>\r\n");
-      out.write("                            <div class=\"form-group\">\r\n");
-      out.write("                                <label>Senha</label>\r\n");
-      out.write("                                <input type=\"password\" class=\"form-control\" placeholder=\"Senha\" name=\"senha\">\r\n");
-      out.write("                            </div>\r\n");
-      out.write("                            <div class=\"d-flex\">\r\n");
-      out.write("                                <input type=\"submit\" name=\"entrar\" value=\"Entrar\" class=\"btn btn-success\" style=\"width: 80px\">\r\n");
-      out.write("                                <!-- <input type=\"submit\" value=\"Cadastrar\" class=\"btn btn-link\" style=\"width: 80px\"> -->\r\n");
-      out.write("                            </div>\r\n");
-      out.write("                        </form>\r\n");
-      out.write("                    </div>    \r\n");
-      out.write("                </div>\r\n");
-      out.write("            </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("    </div>\r\n");
-      out.write("</div>\r\n");
+      out.write("\n");
+      out.write("            ");
+      //  c:if
+      org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+      _jspx_th_c_if_1.setPageContext(_jspx_page_context);
+      _jspx_th_c_if_1.setParent(null);
+      _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${login_msg != null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+      int _jspx_eval_c_if_1 = _jspx_th_c_if_1.doStartTag();
+      if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("                \n");
+          out.write("                ");
+ 
+                    String login_alert = (String) request.getAttribute("login_msg").toString(); 
+          out.write("\n");
+          out.write("                    \n");
+          out.write("                        \n");
+          out.write("                <div class=\"alert alert-info\">\n");
+          out.write("                    <p>");
+          out.print( login_alert );
+          out.write("</p>\n");
+          out.write("                </div>\n");
+          out.write("                    \n");
+          out.write("                \n");
+          out.write("            ");
+          int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_if_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+        return;
+      }
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+      out.write("    \n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"col-6 offset-3 bg-info p-1\">\n");
+      out.write("                <div class=\"card d-flex\">\n");
+      out.write("                    <div class=\"card-body\">\n");
+      out.write("                        <form action=\"index\" method=\"POST\">\t\t\t\n");
+      out.write("                            <div class=\"form-group\">\n");
+      out.write("                                <label>Login</label>\n");
+      out.write("                                <input type=\"text\" class=\"form-control\" placeholder=\"Login\" name=\"login\" v>\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"form-group\">\n");
+      out.write("                                <label>Senha</label>\n");
+      out.write("                                <input type=\"password\" class=\"form-control\" placeholder=\"Senha\" name=\"senha\">\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"d-flex\">\n");
+      out.write("                                <input type=\"submit\" name=\"entrar\" value=\"Entrar\" class=\"btn btn-success\" style=\"width: 80px\">\n");
+      out.write("                                <!-- <input type=\"submit\" value=\"Cadastrar\" class=\"btn btn-link\" style=\"width: 80px\"> -->\n");
+      out.write("                            </div>\n");
+      out.write("                        </form>\n");
+      out.write("                    </div>    \n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
+      out.write("    </div>\n");
+      out.write("</div>\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<!--\n");
       out.write("To change this license header, choose License Headers in Project Properties.\n");
@@ -129,7 +167,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>    \n");
       out.write("    </body>\n");
       out.write("</html>\n");
-      out.write('\r');
       out.write('\n');
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -156,16 +193,16 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\r\n");
-        out.write("                    <div class=\"alert alert-danger\">\r\n");
-        out.write("                        <ul>\r\n");
-        out.write("                            ");
+        out.write("\n");
+        out.write("                <div class=\"alert alert-danger\">\n");
+        out.write("                    <ul>\n");
+        out.write("                        ");
         if (_jspx_meth_c_forEach_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
           return true;
-        out.write("\r\n");
-        out.write("                        </ul>\r\n");
-        out.write("                    </div>\r\n");
-        out.write("                ");
+        out.write("\n");
+        out.write("                    </ul>\n");
+        out.write("                </div>\n");
+        out.write("            ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -194,11 +231,11 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n");
-          out.write("                                <li> ");
+          out.write("\n");
+          out.write("                            <li> ");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${erro}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(" </li>\r\n");
-          out.write("                                ");
+          out.write(" </li>\n");
+          out.write("                            ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

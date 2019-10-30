@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,12 +23,16 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author usuaio
  */
+
+ @WebServlet(name = "Index", urlPatterns = {"/logout.jsp"})
+
 public class Index extends HttpServlet {
 
   protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
         Erro erros = new Erro();
-        if (request.getParameter("entrar") != null) {
+        
+        if (request.getParameter("entrar") != null) { //Utiliza também para o logout
             String login = request.getParameter("login");
             String senha = request.getParameter("senha");
             if (login == null || login.isEmpty()) {
@@ -54,10 +59,16 @@ public class Index extends HttpServlet {
                 }
             }
   
+        }else if(request.getParameter("login") != null){
+            
+            String msg = "Sessão Encerrada";
+            request.getSession().invalidate();
+            request.setAttribute("login_msg", msg);
+            
+            
         }
-        request.getSession().invalidate();
-         
-         
+        //request.getSession().invalidate();
+                
         request.setAttribute("mensagens", erros);
          
         String URL = "login.jsp";
