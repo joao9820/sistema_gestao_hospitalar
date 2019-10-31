@@ -100,9 +100,39 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
       _jspx_th_c_if_1.setPageContext(_jspx_page_context);
       _jspx_th_c_if_1.setParent(null);
-      _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${login_msg != null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+      _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.msg != null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
       int _jspx_eval_c_if_1 = _jspx_th_c_if_1.doStartTag();
       if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("                 <div class=\"alert alert-danger\">\n");
+          out.write("                    <p>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.msg}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</p>\n");
+          out.write("                    ");
+ session.removeAttribute("msg"); 
+          out.write(" <!-- remove a msg da sessão não trazendo-a novamente -->\n");
+          out.write("                </div>\n");
+          out.write("            ");
+          int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_if_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+        return;
+      }
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+      out.write("\n");
+      out.write("            ");
+      //  c:if
+      org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_2 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+      _jspx_th_c_if_2.setPageContext(_jspx_page_context);
+      _jspx_th_c_if_2.setParent(null);
+      _jspx_th_c_if_2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${login_msg != null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+      int _jspx_eval_c_if_2 = _jspx_th_c_if_2.doStartTag();
+      if (_jspx_eval_c_if_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
           out.write("                \n");
@@ -120,16 +150,16 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                    \n");
           out.write("                \n");
           out.write("            ");
-          int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
+          int evalDoAfterBody = _jspx_th_c_if_2.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
         } while (true);
       }
-      if (_jspx_th_c_if_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+      if (_jspx_th_c_if_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_2);
         return;
       }
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_2);
       out.write("    \n");
       out.write("            </div>\n");
       out.write("            <div class=\"col-6 offset-3 bg-info p-1\">\n");

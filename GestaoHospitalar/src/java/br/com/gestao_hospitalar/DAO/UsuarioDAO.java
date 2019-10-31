@@ -73,7 +73,37 @@ public class UsuarioDAO {
         } 
         return null;
     }
+     
+    public  ArrayList<Usuario> getTiposUsuario() throws ClassNotFoundException {
+        
+         ArrayList<Usuario> listTipoUser = new ArrayList<Usuario>();
+        
+        try {
+        Connection conexao = (Connection) FabricaConexao.getConexao();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+            
+            pst = conexao.prepareCall("SELECT * from tp_usuarios ORDER BY id");
+            //pst.setString(1, login);
+            
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                Usuario user = new Usuario();
+                user.setTpUsuarioId(rs.getInt("id"));
+                user.setTpUsuarioNome(rs.getString("nome"));
+                //user.setNome(rs.getString("nome"));
+                listTipoUser.add(user); //adicionando todos os valores do objeto para a classe ArrayList<Noticias>
+                //rs.getBoolean("usu_adm"));
+            }
+            FabricaConexao.fecharConexao();
+            return listTipoUser;
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        return null;
+    }
   
+     
     
      /*
     public List<Agenda> selecionarTudo() throws ClassNotFoundException, SQLException {

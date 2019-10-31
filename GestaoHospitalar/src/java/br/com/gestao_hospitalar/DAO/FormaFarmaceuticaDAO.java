@@ -56,9 +56,10 @@ public class FormaFarmaceuticaDAO {
            listFormaF.add(formaBean); //adicionando todos os valores do objeto para a classe ArrayList<Noticias>
          } 
          FabricaConexao.fecharConexao();
+          return listFormaF;
        }catch (Exception e){
            System.out.println("Erro " + e.getMessage());
      } 
-       return listFormaF;
+       return null;
      }
 }

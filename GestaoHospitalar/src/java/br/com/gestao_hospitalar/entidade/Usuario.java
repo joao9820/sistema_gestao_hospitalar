@@ -15,10 +15,33 @@ public class Usuario {
     
     private int id;
     private int tipoUsuario;
+    private int tpUsuarioId;
+    private String tpUsuarioNome;
     private String nome;
     private String userName;
     private String senha;
     private Date dataRegistro;
+
+    public Usuario() {
+        
+    }
+
+    public int getTpUsuarioId() {
+        return tpUsuarioId;
+    }
+
+    public void setTpUsuarioId(int tpUsuarioId) {
+        this.tpUsuarioId = tpUsuarioId;
+    }
+
+    public String getTpUsuarioNome() {
+        return tpUsuarioNome;
+    }
+
+    public void setTpUsuarioNome(String tpUsuarioNome) {
+        this.tpUsuarioNome = tpUsuarioNome;
+    }
+
 
     public Usuario(int id, String nome, String username, String email, String senha) {
         

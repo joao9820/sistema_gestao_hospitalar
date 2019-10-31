@@ -17,6 +17,10 @@
         <servlet-name>index</servlet-name>
         <servlet-class>br.com.gestao_hospitalar.bean.Index</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastrarUsuarioServlet</servlet-name>
+        <servlet-class>br.com.gestao_hospitalar.bean.CadastrarUsuarioServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>G_hospitalar_Servlet</servlet-name>
         <url-pattern>/Ghospitalar</url-pattern>
@@ -24,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarUsuarioServlet</servlet-name>
+        <url-pattern>/CadastrarUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

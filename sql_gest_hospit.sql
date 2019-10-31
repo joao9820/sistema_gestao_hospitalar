@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Out-2019 às 01:25
+-- Generation Time: 31-Out-2019 às 00:27
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -117,6 +117,14 @@ CREATE TABLE `tp_usuarios` (
   `nome` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `tp_usuarios`
+--
+
+INSERT INTO `tp_usuarios` (`id`, `nome`) VALUES
+(1, 'Administrador'),
+(2, 'Cliente');
+
 -- --------------------------------------------------------
 
 --
@@ -161,7 +169,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `tp_usuario_id`, `nome`, `email`, `username`, `senha`, `data_criacao`) VALUES
-(1, NULL, 'joao', 'joaovictorv9820@gmail.com', 'joao9820', '123456', NULL);
+(1, 1, 'joao', 'joaovictorv9820@gmail.com', 'joao9820', '123456', NULL);
 
 --
 -- Indexes for dumped tables
@@ -253,7 +261,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT for table `tp_usuarios`
 --
 ALTER TABLE `tp_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `unidades`
