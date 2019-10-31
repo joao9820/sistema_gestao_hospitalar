@@ -22,6 +22,24 @@
                     </ul>
                 </div>
             </c:if>
+            <c:if test="${sessionScope.msg != null}">
+                 <div class="alert alert-danger">
+                    <p>${sessionScope.msg}</p>
+                    <% session.removeAttribute("msg"); %> <!-- remove a msg da sessão não trazendo-a novamente -->
+                </div>
+            </c:if>
+            <c:if test="${login_msg != null}">
+                
+                <% 
+                    String login_alert = (String) request.getAttribute("login_msg").toString(); %>
+                    
+                        
+                <div class="alert alert-info">
+                    <p><%= login_alert %></p>
+                </div>
+                    
+                
+            </c:if>    
             </div>
             <div class="col-6 offset-3 bg-info p-1">
                 <div class="card d-flex">
