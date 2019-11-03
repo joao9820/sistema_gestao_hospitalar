@@ -6,7 +6,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="includes/cabecalho.html" %>
-<!DOCTYPE html>
 
 <div class="row">
     <div class="col align-self-center p-3">

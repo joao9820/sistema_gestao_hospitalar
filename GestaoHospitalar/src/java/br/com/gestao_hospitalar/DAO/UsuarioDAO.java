@@ -55,6 +55,43 @@ public class UsuarioDAO {
          return false;
     }
      
+     public ArrayList<Usuario> getAll() throws ClassNotFoundException {
+        
+        ArrayList<Usuario> listUser = new ArrayList<Usuario>();
+        
+        try {
+            
+            Connection conexao = (Connection) FabricaConexao.getConexao();
+            PreparedStatement pst = null;
+            ResultSet rs = null;
+            
+            pst = conexao.prepareCall("SELECT u.id, tp_us.nome as nome_tp, u.nome , u.username, u.email, u.data_criacao "
+                    + "from usuarios u INNER JOIN tp_usuarios tp_us ON tp_us.id = u.tp_usuario_id  ORDER BY u.nome");
+            
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                Usuario user = new Usuario();
+                
+                user.setId(rs.getInt("id")); 
+                user.setTpUsuarioNome(rs.getString("nome_tp"));
+                user.setNome(rs.getString("nome")); 
+                user.setUserName(rs.getString("username"));
+                user.setEmail(rs.getString("email"));
+                user.setDataRegistro(rs.getDate("data_criacao"));
+                
+                listUser.add(user);
+                
+            }
+            
+            
+            FabricaConexao.fecharConexao();
+            return listUser;
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        return null;
+    }
+     
      public Usuario getSingle(String login) throws ClassNotFoundException {
         Connection conexao = (Connection) FabricaConexao.getConexao();
         PreparedStatement pst = null;

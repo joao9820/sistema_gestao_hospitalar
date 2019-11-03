@@ -50,7 +50,6 @@ public final class cadastro_005fusuario_jsp extends org.apache.jasper.runtime.Ht
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-<<<<<<< HEAD
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -59,16 +58,7 @@ public final class cadastro_005fusuario_jsp extends org.apache.jasper.runtime.Ht
       out.write("\r\n");
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
-=======
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
->>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
+      
       out.write("<!DOCTYPE html>\n");
       out.write("<!--\n");
       out.write("To change this license header, choose License Headers in Project Properties.\n");
@@ -89,35 +79,6 @@ public final class cadastro_005fusuario_jsp extends org.apache.jasper.runtime.Ht
       out.write("            <main role=\"main\"> \n");
       out.write("                \n");
       out.write("                 ");
-<<<<<<< HEAD
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<div class=\"row\">\r\n");
-      out.write("    <div class=\"col-6 offset-3 bg-info p-1\">\r\n");
-      out.write("        <div class=\"card d-flex\">\r\n");
-      out.write("            <div class=\"card-body\">\r\n");
-      out.write("                <h2 class=\"text-center\">Cadastrar Usuário</h2>\r\n");
-      out.write("                <form action=\"CadastrarUsuario\" method=\"POST\">\r\n");
-      out.write("                    <div class=\"form-group\">\r\n");
-      out.write("                        <label>Nome</label>\r\n");
-      out.write("                        <input type=\"text\" class=\"form-control\" placeholder=\"Nome\" name=\"nome\" v>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div class=\"form-group\">\r\n");
-      out.write("                        <label>E-mail</label>\r\n");
-      out.write("                        <input type=\"email\" class=\"form-control\" placeholder=\"E-mail\" name=\"email\" v>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div class=\"form-group\">\r\n");
-      out.write("                        <label>Username</label>\r\n");
-      out.write("                        <input type=\"text\" class=\"form-control\" placeholder=\"Username\" name=\"username\" v>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div class=\"form-group\">\r\n");
-      out.write("                        <label>Senha</label>\r\n");
-      out.write("                        <input type=\"password\" class=\"form-control\" placeholder=\"Senha\" name=\"senha\" v>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("\r\n");
-      out.write("                    <div class=\"form-group\">\r\n");
-      out.write("\r\n");
-=======
       out.write("\n");
       out.write("\n");
       out.write("<div class=\"row\">\n");
@@ -145,7 +106,7 @@ public final class cadastro_005fusuario_jsp extends org.apache.jasper.runtime.Ht
       out.write("\n");
       out.write("                    <div class=\"form-group\">\n");
       out.write("\n");
->>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
+
       out.write("                        ");
 
 
@@ -166,43 +127,31 @@ public final class cadastro_005fusuario_jsp extends org.apache.jasper.runtime.Ht
 
 
                         
-<<<<<<< HEAD
       out.write("\r\n");
       out.write("\r\n");
       out.write("                        <div class=\"form-check form-check-inline\">\r\n");
-=======
-      out.write("\n");
-      out.write("\n");
-      out.write("                        <div class=\"form-check form-check-inline\">\n");
->>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
+
+      
       out.write("                            <input class=\"form-check-input\" type=\"radio\" name=\"tipo_usuario\" id=\"");
       out.print( tpUsuario_id);
       out.write("\" value=\"");
       out.print( tpUsuario_id);
-<<<<<<< HEAD
+
       out.write("\">\r\n");
-=======
-      out.write("\">\n");
->>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
       out.write("                            <label class=\"form-check-label\" for=\"");
       out.print( tpUsuario_id);
       out.write('"');
       out.write('>');
       out.print(tpUsuario_nome);
-<<<<<<< HEAD
+
       out.write("</label>\r\n");
       out.write("                        </div>\r\n");
       out.write("\r\n");
-=======
-      out.write("</label>\n");
-      out.write("                        </div>\n");
-      out.write("\n");
->>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
       out.write("                        ");
 
                             }
                         
-<<<<<<< HEAD
+
       out.write("\r\n");
       out.write("\r\n");
       out.write("                    </div>\r\n");
@@ -217,22 +166,6 @@ public final class cadastro_005fusuario_jsp extends org.apache.jasper.runtime.Ht
       out.write("    </div>\r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
-=======
-      out.write("\n");
-      out.write("\n");
-      out.write("                    </div>\n");
-      out.write("\n");
-      out.write("                    <div class=\"d-flex py-2\">\n");
-      out.write("                        <input type=\"submit\" name=\"Cadastrar\" value=\"Cadastrar\" class=\"btn btn-success btn-block\">\n");
-      out.write("                        <!-- <input type=\"submit\" value=\"Cadastrar\" class=\"btn btn-link\" style=\"width: 80px\"> -->\n");
-      out.write("                    </div>\n");
-      out.write("                </form>\n");
-      out.write("            </div>    \n");
-      out.write("        </div>\n");
-      out.write("    </div>\n");
-      out.write("</div>\n");
-      out.write("\n");
->>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
       out.write("<!DOCTYPE html>\n");
       out.write("<!--\n");
       out.write("To change this license header, choose License Headers in Project Properties.\n");
@@ -245,13 +178,9 @@ public final class cadastro_005fusuario_jsp extends org.apache.jasper.runtime.Ht
       out.write("        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>    \n");
       out.write("    </body>\n");
       out.write("</html>\n");
-<<<<<<< HEAD
+
       out.write("\r\n");
       out.write("\r\n");
-=======
-      out.write('\n');
-      out.write('\n');
->>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
