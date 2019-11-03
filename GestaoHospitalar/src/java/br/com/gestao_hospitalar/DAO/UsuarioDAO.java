@@ -25,27 +25,71 @@ import java.util.logging.Logger;
  */
 public class UsuarioDAO {
     
-     public void inserir(Usuario usuario) throws ClassNotFoundException, SQLException, ParseException {
+     public boolean inserir(Usuario usuario) throws ClassNotFoundException, SQLException, ParseException {
         try {
             Connection conexao = (Connection) FabricaConexao.getConexao();
             PreparedStatement pst = null;
            
             pst = conexao.prepareCall("INSERT INTO usuarios (id, tp_usuario_id, nome ,username, email, senha, data_criacao)"
-                        + " values(null,?,?,?,?,?)");
+                        + " values(null,?,?,?,?,?,?)");
            
-              
-            pst.setInt(1, usuario.getTipoUsuario());
+            
+            pst.setInt(1, usuario.getTpUsuarioId());
             pst.setString(2, usuario.getNome());
             pst.setString(3, usuario.getUserName());
             pst.setString(4, usuario.getEmail());
             pst.setString(5, usuario.getSenha());
             pst.setDate(6,new Date(usuario.getDataRegistro().getTime()));
-            pst.execute();
             
-            FabricaConexao.fecharConexao();
+            if(pst.execute()){
+                FabricaConexao.fecharConexao();
+                return true;
+            }else{
+                FabricaConexao.fecharConexao();
+                return false;
+            }
+            
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
+         return false;
+    }
+     
+     public ArrayList<Usuario> getAll() throws ClassNotFoundException {
+        
+        ArrayList<Usuario> listUser = new ArrayList<Usuario>();
+        
+        try {
+            
+            Connection conexao = (Connection) FabricaConexao.getConexao();
+            PreparedStatement pst = null;
+            ResultSet rs = null;
+            
+            pst = conexao.prepareCall("SELECT u.id, tp_us.nome as nome_tp, u.nome , u.username, u.email, u.data_criacao "
+                    + "from usuarios u INNER JOIN tp_usuarios tp_us ON tp_us.id = u.tp_usuario_id  ORDER BY u.nome");
+            
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                Usuario user = new Usuario();
+                
+                user.setId(rs.getInt("id")); 
+                user.setTpUsuarioNome(rs.getString("nome_tp"));
+                user.setNome(rs.getString("nome")); 
+                user.setUserName(rs.getString("username"));
+                user.setEmail(rs.getString("email"));
+                user.setDataRegistro(rs.getDate("data_criacao"));
+                
+                listUser.add(user);
+                
+            }
+            
+            
+            FabricaConexao.fecharConexao();
+            return listUser;
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        return null;
     }
      
      public Usuario getSingle(String login) throws ClassNotFoundException {

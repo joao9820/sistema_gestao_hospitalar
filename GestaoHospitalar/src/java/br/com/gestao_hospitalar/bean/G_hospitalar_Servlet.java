@@ -83,13 +83,26 @@ public class G_hospitalar_Servlet extends HttpServlet {
                  
             try {
                 med_dao.inserir(med);
+
                 
+                request.setAttribute("nome", med.getNome());
+                request.setAttribute("descricao", med.getDescricao());
+                request.setAttribute("quantidade", med.getQuantidade());
+                request.setAttribute("valor", med.getValor());
+                request.setAttribute("estoque", med.getEstoque_min());
+                request.setAttribute("forma_farmaceutica", med.getForma_farmaceutica_id());
+                request.setAttribute("",med.getData_criacao());
+                
+                RequestDispatcher rd = 
+                request.getRequestDispatcher("sucesso_medicamentos.jsp");
+                rd.forward(request, response);
+
                 //lcd.listar();
                 
                 //out.println("testando");
                 //out.println(lcd.getResultado());
-            } catch (Exception ex) {
-                Logger.getLogger(G_hospitalar_Servlet.class.getName()).log(Level.SEVERE, null, ex);
+            }catch (Exception e) {
+                Logger.getLogger(G_hospitalar_Servlet.class.getName()).log(Level.SEVERE, null, e);
             }
               
 
