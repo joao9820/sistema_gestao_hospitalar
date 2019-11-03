@@ -1,0 +1,26 @@
+SMAP
+cadastro_005fmedicamentos_jsp.java
+JSP
+*S JSP
+*F
++ 0 cadastro_medicamentos.jsp
+cadastro_medicamentos.jsp
++ 1 cabecalho.html
+includes/cabecalho.html
++ 2 rodape.html
+includes/rodape.html
+*L
+5,8:53
+1#1,20:60
+12#0,5:80
+17:85,3
+18,17:88
+36,17:107
+52,2:124
+54:126,6
+55,2:132
+57,2:135
+58,18:137
+1#2,13:155
+75#0:167,2
+*E

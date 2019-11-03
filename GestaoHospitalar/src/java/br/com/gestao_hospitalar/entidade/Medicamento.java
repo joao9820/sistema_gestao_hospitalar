@@ -22,7 +22,7 @@ public class Medicamento {
     private Integer quantidade;
     private Float valor;
     private Integer estoque_min;
-    private String data_criacao;
+    private Date data_criacao;
     private String data_modificacao;
 
     public Integer getId() {
@@ -89,11 +89,11 @@ public class Medicamento {
         this.estoque_min = estoque_min;
     }
 
-    public String getData_criacao() {
+    public Date getData_criacao() {
         return data_criacao;
     }
 
-    public void setData_criacao(String data_criacao) {
+    public void setData_criacao(Date data_criacao) {
         this.data_criacao = data_criacao;
     }
 

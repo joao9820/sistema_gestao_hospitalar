@@ -3,53 +3,89 @@
     Created on : 23/10/2019, 18:50:54
     Author     : matheus.louzeiro
 --%>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<%@page import="br.com.gestao_hospitalar.DAO.FormaFarmaceuticaDAO"%>
+<%@page import="br.com.gestao_hospitalar.entidade.FormaFarmaceutica"%>
+<%@page import="java.util.ArrayList"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-  
-    
-            <div class='container col-md-3' >
-   
-    
-    <form action='Ghospitalar' method="POST">
-       <h1>Cadastro de Medicamentos</h1>    <form action='G_hospitalar_Servlet.java' method="POST">
+<%@include file="includes/cabecalho.html" %>
 
-             <div class="form-group" >
-               Nome: <input type='text' class='form-control' name='nome' />                     
-             </div>
-             <div class="form-group" >
-               Descricão: <input type='text' class='form-control' name='descricao' />                     
-             </div>
-                     <div class="form-group" >
-               Quantidade: <input type='text' class='form-control' name='quantidade' />                     
-             </div>
-                     <div class="form-group" >
-               Valor: <input type='text' class='form-control' name='valor' />                     
-             </div>
-                     <div class="form-group" >
-               Estoque Min <input type='text' class='form-control' name='estoque' />                     
-             </div>
-             <div class="form-group" >
-               Data de Criação: <input type='text' class='form-control' name='data_criacao' />                     
-             </div>
-             <div class="form-group" >
-               Data de Modificação: <input type='text' class='form-control' name='data_mod' />                     
-             </div>
+<c:choose>
+    <c:when test="${(sessionScope.usuarioLogado.id) != null}">
 
-            <div class="form-group">
-                <button class="btn btn-primary" value='enviar' type="submit">Enviar</button>&nbsp;&nbsp;
-                <button class="btn btn-danger" value='Limpar' type="reset">Limpar</button>
-            </div>
-        </form>
-    </div>
+        <div class="col-md-6 offset-md-3">  
+            <form action='Ghospitalar' method="POST">
+                <h2 class="text-center">Cadastro de Medicamentos</h2>
+
+                <div class="form-group" >
+                    Nome: <input type='text' class='form-control' name='nome' />                     
+                </div>
+                <div class="form-group" >
+                    Descrição: <input type='text' class='form-control' name='descricao' />                     
+                </div>
+                <div class="form-group" >
+                    Quantidade: <input type='number' class='form-control' name='quantidade' />                     
+                </div>
+                <div class="form-group" >
+                    Valor: <input type="text" class='form-control' name='valor' />                     
+                </div>
+                <div class="col-md-4 pl-0">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Forma farmaceutica</label>   
+                        <select name="forma_farmaceutica" class="form-control" id="exampleFormControlSelect2">
+                            <%
+
+                                String forma_id = "";
+                                String forma_nome = "";
+
+                                FormaFarmaceuticaDAO listarFormas = new FormaFarmaceuticaDAO();
+                                FormaFarmaceutica f = new FormaFarmaceutica();
+
+                                ArrayList<FormaFarmaceutica> formaList = listarFormas.pesquisarTudo();
+
+                                for (int i = 0; i < formaList.size(); i++) {
+
+                                    f = formaList.get(i);
+
+                                    forma_id = String.valueOf(f.getId());
+                                    forma_nome = String.valueOf(f.getNome());
+
+
+                            %>
+
+                            <option value="<%=forma_id%>"><%=forma_nome%></option>
+
+                            <%
+                                }
+                            %>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" >
+                    Estoque Mínimo <input type='number' class='form-control' name='estoque' />                     
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary" value='enviar' type="submit">Enviar</button>&nbsp;&nbsp;
+                    <button class="btn btn-danger" value='Limpar' type="reset">Limpar</button>
+                </div>
+            </form>
+
+        </div>
+        <!-- response.sendRedirect("http://localhost:8080/PortalCCO"); -->
+    </c:when>
+    <c:otherwise>
         
-        
-    </body>
-</html>
+        <% 
+            request.getSession().setAttribute("msg", "Realize o login");
+            
+            response.sendRedirect("/GestaoHospitalar/logout.jsp"); 
+        %>
+    </c:otherwise>
+</c:choose>
+    <%@include file="includes/rodape.html" %>
+
