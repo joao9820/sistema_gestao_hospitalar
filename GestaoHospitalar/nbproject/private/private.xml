@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Matheus/Desktop/Teste%20Projeto/GestaoHospitalar/src/java/br/com/gestao_hospitalar/DAO/MedicamentoDAO.java</file>
+=======
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/WEB-INF/web.xml</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/View/logado/menu.jsp</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/login.jsp</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/bean/Index.java</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/cadastro_medicamentos.jsp</file>
+>>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
         </group>
     </open-files>
 </project-private>

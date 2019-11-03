@@ -83,6 +83,7 @@ public class G_hospitalar_Servlet extends HttpServlet {
                  
             try {
                 med_dao.inserir(med);
+<<<<<<< HEAD
                 
                 request.setAttribute("nome", med.getNome());
                 request.setAttribute("descricao", med.getDescricao());
@@ -99,6 +100,8 @@ public class G_hospitalar_Servlet extends HttpServlet {
                 
                 
                 
+=======
+>>>>>>> 9355f1d22de26b020dedbee227e75a27bc7d35c6
                 
                 //lcd.listar();
                 
