@@ -25,27 +25,34 @@ import java.util.logging.Logger;
  */
 public class UsuarioDAO {
     
-     public void inserir(Usuario usuario) throws ClassNotFoundException, SQLException, ParseException {
+     public boolean inserir(Usuario usuario) throws ClassNotFoundException, SQLException, ParseException {
         try {
             Connection conexao = (Connection) FabricaConexao.getConexao();
             PreparedStatement pst = null;
            
             pst = conexao.prepareCall("INSERT INTO usuarios (id, tp_usuario_id, nome ,username, email, senha, data_criacao)"
-                        + " values(null,?,?,?,?,?)");
+                        + " values(null,?,?,?,?,?,?)");
            
-              
-            pst.setInt(1, usuario.getTipoUsuario());
+            
+            pst.setInt(1, usuario.getTpUsuarioId());
             pst.setString(2, usuario.getNome());
             pst.setString(3, usuario.getUserName());
             pst.setString(4, usuario.getEmail());
             pst.setString(5, usuario.getSenha());
             pst.setDate(6,new Date(usuario.getDataRegistro().getTime()));
-            pst.execute();
             
-            FabricaConexao.fecharConexao();
+            if(pst.execute()){
+                FabricaConexao.fecharConexao();
+                return true;
+            }else{
+                FabricaConexao.fecharConexao();
+                return false;
+            }
+            
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
+         return false;
     }
      
      public Usuario getSingle(String login) throws ClassNotFoundException {
