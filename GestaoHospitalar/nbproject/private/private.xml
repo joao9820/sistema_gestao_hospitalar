@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/logado/Menu.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/DAO/FormaFarmaceuticaDAO.java</file>
+            <file>file:/C:/Users/Matheus/Desktop/Teste%20Projeto/GestaoHospitalar/src/java/br/com/gestao_hospitalar/DAO/MedicamentoDAO.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/WEB-INF/web.xml</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/View/logado/menu.jsp</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/entidade/Usuario.java</file>
@@ -15,6 +17,7 @@
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/filtro/UsuarioLogado.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/cadastro_medicamentos.jsp</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/entidade/FormaFarmaceutica.java</file>
+
         </group>
     </open-files>
 </project-private>
