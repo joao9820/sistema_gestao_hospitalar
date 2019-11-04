@@ -78,14 +78,10 @@ public class CadastrarUsuarioServlet extends HttpServlet {
             Mensagem alert = new Mensagem();
             try {
 
-                if(userDao.inserir(userEnt)){
+                    userDao.inserir(userEnt);
                     msg = "Usuário cadastrado com sucesso!";
                     alert.setAlerta(msg, "success");
-                }else{
-                    msg = "Nao foi possível cadastrar o usuário";
-                    alert.setAlerta(msg, "danger");
-                }
-
+      
             } catch (Exception e) {
 
                 msg = "Nao foi possível cadastrar o usuário";
