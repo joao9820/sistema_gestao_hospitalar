@@ -3,6 +3,7 @@
     Created on : 23/10/2019, 18:50:54
     Author     : matheus.louzeiro
 --%>
+<%@page import="br.com.gestao_hospitalar.util.Mensagem"%>
 <%@page import="br.com.gestao_hospitalar.DAO.FormaFarmaceuticaDAO"%>
 <%@page import="br.com.gestao_hospitalar.entidade.FormaFarmaceutica"%>
 <%@page import="java.util.ArrayList"%>
@@ -11,7 +12,7 @@
 
 <!DOCTYPE html>
 <%@include file="includes/cabecalho.html" %>
-
+<%@include file="/includes/menu_header.jsp" %>
 <c:choose>
     <c:when test="${(sessionScope.usuarioLogado.id) != null}">
 
@@ -81,9 +82,12 @@
     <c:otherwise>
         
         <% 
-            request.getSession().setAttribute("msg", "Realize o login");
+                       
+            Mensagem alert = new Mensagem();
             
-            response.sendRedirect("/GestaoHospitalar/logout.jsp"); 
+            alert.setAlerta("Realize o login!", "info");
+            request.getSession().setAttribute("msg", alert.getAlerta());
+            response.sendRedirect("/GestaoHospitalar/login.jsp"); 
         %>
     </c:otherwise>
 </c:choose>

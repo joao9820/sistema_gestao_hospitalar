@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
 <%@include file="/includes/cabecalho.html" %>
+<%@include file="/includes/menu_header.jsp" %>
         <h1>Menu do Sistema</h1>
         
         <p>Olá ${sessionScope.usuarioLogado.nome}</p>

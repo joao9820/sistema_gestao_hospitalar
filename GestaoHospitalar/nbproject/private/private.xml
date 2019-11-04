@@ -4,7 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/logado/Menu.java</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/includes/menu_header.jsp</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/cadastro_usuario.jsp</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/includes/cabecalho.html</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/includes/menu.html</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/bean/G_hospitalar_Servlet.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/listar_usuarios.jsp</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/bean/Index.java</file>
@@ -13,10 +16,11 @@
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/entidade/FormaFarmaceutica.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/util/Erro.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/util/FabricaConexao.java</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/WEB-INF/web.xml</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/View/logado/menu.jsp</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/entidade/Usuario.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/login.jsp</file>
-            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/util/Mensagem.java</file>
+            <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/includes/rodape.html</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/src/java/br/com/gestao_hospitalar/bean/CadastrarUsuarioServlet.java</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/listar_medicamentos.jsp</file>
             <file>file:/C:/xampp/htdocs/sistema_gestao_hospitalar/GestaoHospitalar/web/sucesso_medicamentos.jsp</file>
